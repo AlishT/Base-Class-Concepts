@@ -30,7 +30,7 @@ void AMyActor::PostInitializeComponents()
 {
 	Super::PostInitializeComponents();
 
-	Weapon = NewObject<UWeaponComponent>(this);
+	Weapon = NewObject<UWeaponComponent>(this, WeaponClass);
 	
 	Weapon->RegisterComponent();
 	Weapon->AttachToComponent(RootComponent, FAttachmentTransformRules::KeepRelativeTransform);
